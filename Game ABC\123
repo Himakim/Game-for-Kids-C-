@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<iostream>
+#include<conio.h>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+
+int main(){
+	int opcion;
+	char letra;
+	int numeros;
+	
+	system("color 5B");
+	printf("Hola Bienvenido!!! Vamos a Jugar\n");
+	printf("\n[1] VOCALES\n[2] NUMEROS\n");
+	printf("\nSeleccionar opcion: ");
+	scanf("%d",&opcion);
+	
+	if(opcion == 1){
+	cout<< "\nEscribe la o las vocales que conoces: ";
+	cin>>letra;
+	
+	switch(letra){
+	case 'A': case 'a': case 'E': case 'e': case 'I': case 'i': case 'O': case 'o':
+	case 'U': case 'u':cout<<"\n \nCORRECTO Si son las Vocales"; break;
+		default: cout<<"\n \nUPS! INCORRECTO Parece que no es una Vocal"; break;}	 
+	}else{	
+		srand(time(NULL));
+		printf("%d", rand());
+		printf("%d", RAND_MAX);
+		printf("\n\nCuantos numeros puedes contar");
+	
+	cout<< "\nDigite la cantidad: ";
+	cin>>numeros;
+	
+    switch(numeros){
+		case 9:cout<<"\n \nCORRECTO son 9 numeros!"; break;
+		default: cout<<"\n \nINCORRECTO son 9 numeros!"; break;}	
+	}
+	
+	printf("\n \nMuchas Gracias Por Jugar! Sigue Aprendiendo... Nos Vemos La Proxima :)");
+	
+	return 0;
+}
